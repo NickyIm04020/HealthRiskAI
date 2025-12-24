@@ -1,5 +1,3 @@
-Here’s a **resume / GitHub featured README** version — **crisp, recruiter-friendly, and impact-focused**, written as a **Bash command** so you can drop it straight into your repo.
-
 ```bash
 cat << 'EOF' > README.md
 # HealthRiskAI 🏥  
