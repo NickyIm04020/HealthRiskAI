@@ -1,64 +1,73 @@
-```bash
-cat << 'EOF' > README.md
-# HealthRiskAI 🏥  
-**Interpretable Disease Risk Prediction using XGBoost & SHAP**
+```md
+# 🏥 HealthRiskAI – Interpretable Disease Risk Prediction
 
-HealthRiskAI is a production-ready machine learning system for predicting chronic disease risk (Diabetes & Cardiovascular) with **model transparency at the patient level**. Built to solve the black-box problem in medical AI.
+### 🧩 Overview
+HealthRiskAI is a **production-ready machine learning system** that predicts **chronic disease risk (Diabetes & Cardiovascular)** while maintaining **full model transparency**.  
+It tackles the medical AI *black-box problem* by combining **XGBoost** with **SHAP-based explanations** at the patient level.
 
 ---
 
-## 🔥 Highlights
-
+### 🔥 Highlights
 - **AUC-ROC:** 0.92  
 - **Brier Score:** 0.12 (well-calibrated probabilities)  
-- **Explainability:** SHAP-based feature attribution per prediction  
-- **Deployment Ready:** Modular ML + API design (Lambda-compatible)
+- **Explainable AI:** SHAP-based feature attribution for every prediction  
+- **Deployment Ready:** Modular ML + API design (AWS Lambda compatible)
 
 ---
 
-## 🧠 What It Does
-
+### 🧠 What It Does
 - Predicts disease risk from clinical features  
-- Explains *why* a patient is high-risk (top contributing factors)  
-- Outputs actionable, interpretable scores suitable for healthcare use
+- Explains *why* a patient is high-risk by identifying top contributing factors  
+- Outputs interpretable, actionable risk scores suitable for healthcare and regulated domains  
 
 ---
 
-## ⚙️ Tech Stack
-
+### ⚙️ Tech Stack
 - **ML:** Python, XGBoost, Scikit-Learn  
 - **Explainability:** SHAP (TreeExplainer)  
 - **API:** Flask  
-- **Data:** Synthetic clinical dataset
+- **Data:** Synthetic clinical dataset  
 
 ---
 
-## 🏗 Architecture
-
+### 🏗️ Project Architecture
 ```
 
 HealthRiskAI/
 ├── src/        # Model training & evaluation
 ├── api/        # Flask inference API
-├── models/     # Trained XGBoost model
+└── models/     # Trained XGBoost model
 
 ````
 
 ---
 
-## 🚀 Quick Start
+### 🚀 Quick Start
 
+#### 1️⃣ Installation
 ```bash
 git clone https://github.com/YOUR_USERNAME/HealthRiskAI.git
 cd HealthRiskAI
 pip install -r requirements.txt
-python src/model.py
-python api/app.py
 ````
+
+#### 2️⃣ Train the Model
+
+```bash
+python src/model.py
+```
+
+#### 3️⃣ Run the API
+
+```bash
+python api/app.py
+```
 
 ---
 
-## 📡 API Example
+### 📡 API Usage Example
+
+#### Request
 
 ```bash
 curl -X POST http://127.0.0.1:5000/predict \
@@ -66,7 +75,7 @@ curl -X POST http://127.0.0.1:5000/predict \
 -d '{"features":[65,30.5,8.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
 ```
 
-**Response**
+#### Response
 
 ```json
 {
@@ -78,15 +87,14 @@ curl -X POST http://127.0.0.1:5000/predict \
 
 ---
 
-## 💡 Why This Project Matters
+### 💡 Why This Project Matters
 
-* Bridges **ML performance + clinical interpretability**
-* Demonstrates **end-to-end ML engineering**
-* Suitable for **healthcare, fintech risk, and regulated AI systems**
+* Bridges **high ML performance** with **clinical interpretability**
+* Demonstrates **end-to-end ML engineering** (Data → Model → Explainability → API)
+* Applicable to **healthcare, fintech risk scoring, and regulated AI systems**
 
 ---
 
-## 📄 License
+### 📄 License
 
 MIT License
-EOF
