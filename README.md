@@ -1,24 +1,24 @@
-```md
 # 🏥 HealthRiskAI – Interpretable Disease Risk Prediction
 
 ### 🧩 Overview
-HealthRiskAI is a **production-ready machine learning system** that predicts **chronic disease risk (Diabetes & Cardiovascular)** while maintaining **full model transparency**.  
-It tackles the medical AI *black-box problem* by combining **XGBoost** with **SHAP-based explanations** at the patient level.
+HealthRiskAI is a **production-ready machine learning system** for predicting **chronic disease risk (Diabetes & Cardiovascular)** with **patient-level interpretability**.
+
+It addresses the *black-box problem* in medical AI by combining **XGBoost** with **SHAP-based explanations**, making predictions transparent and actionable.
 
 ---
 
 ### 🔥 Highlights
-- **AUC-ROC:** 0.92  
-- **Brier Score:** 0.12 (well-calibrated probabilities)  
-- **Explainable AI:** SHAP-based feature attribution for every prediction  
-- **Deployment Ready:** Modular ML + API design (AWS Lambda compatible)
+- **High Performance:** AUC-ROC of **0.92**
+- **Well-Calibrated:** Brier Score **0.12**
+- **Explainable AI:** SHAP feature attribution per prediction
+- **Deployment Ready:** Modular ML + API design (Lambda-compatible)
 
 ---
 
 ### 🧠 What It Does
-- Predicts disease risk from clinical features  
-- Explains *why* a patient is high-risk by identifying top contributing factors  
-- Outputs interpretable, actionable risk scores suitable for healthcare and regulated domains  
+- Predicts disease risk from structured clinical features  
+- Explains *why* a patient is high-risk (top contributing factors)  
+- Outputs interpretable risk scores suitable for healthcare use  
 
 ---
 
@@ -30,7 +30,7 @@ It tackles the medical AI *black-box problem* by combining **XGBoost** with **SH
 
 ---
 
-### 🏗️ Project Architecture
+### 🏗️ Project Structure
 ```
 
 HealthRiskAI/
@@ -44,7 +44,7 @@ HealthRiskAI/
 
 ### 🚀 Quick Start
 
-#### 1️⃣ Installation
+#### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/YOUR_USERNAME/HealthRiskAI.git
 cd HealthRiskAI
@@ -65,9 +65,9 @@ python api/app.py
 
 ---
 
-### 📡 API Usage Example
+### 📡 API Example
 
-#### Request
+**Request**
 
 ```bash
 curl -X POST http://127.0.0.1:5000/predict \
@@ -75,7 +75,7 @@ curl -X POST http://127.0.0.1:5000/predict \
 -d '{"features":[65,30.5,8.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
 ```
 
-#### Response
+**Response**
 
 ```json
 {
@@ -89,12 +89,14 @@ curl -X POST http://127.0.0.1:5000/predict \
 
 ### 💡 Why This Project Matters
 
-* Bridges **high ML performance** with **clinical interpretability**
-* Demonstrates **end-to-end ML engineering** (Data → Model → Explainability → API)
-* Applicable to **healthcare, fintech risk scoring, and regulated AI systems**
+* Combines **ML accuracy + explainability**
+* Demonstrates **end-to-end ML engineering** (Data → Model → API)
+* Relevant for **healthcare, fintech risk, and regulated AI systems**
 
 ---
 
 ### 📄 License
 
 MIT License
+
+
